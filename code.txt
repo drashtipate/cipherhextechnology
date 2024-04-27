@@ -1,0 +1,15 @@
+                @forelse ($services as $servicetype)
+                    <div class="col-md-4">
+                        <div class="features-item text-center" style="height:400px;">
+                            <img class="img fluid mb-4"  src="{{ asset('upload/feature/'.$servicetype->icon) }}" alt="ANDROID DEVELOPMENT">
+                            <h5 class="mb-4">{{$servicetype->name}}</h5>
+                            <p>
+                                {{$servicetype->description}}
+                            </p>
+                        </div>
+                    </div>
+                    @empty
+                    <div class="">
+                        <h5>No Service Available</h5>
+                    </div>
+                @endforelse
